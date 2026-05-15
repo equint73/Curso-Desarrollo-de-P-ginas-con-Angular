@@ -1,0 +1,16 @@
+<h4>CRUD TAREAS</h4>
+
+<input #nuevaTarea class="form-control mb-2" placeholder="Nueva tarea" />
+<button class="btn btn-primary" (click)="agregarTarea(nuevaTarea.value)">Agregar</button>
+
+<ul class="list-group mt-3">
+  <li class="list-group-item" *ngFor="let tarea of tareas">
+    <app-tarea-item [texto]="tarea"></app-tarea-item>
+  </li>
+</ul>
+<br>
+<!-- <ul class="list-group mt-3">
+  <li *ngFor="let tarea of tareas" class="list-group-item">
+    {{ tarea }}
+  </li>
+</ul> -->
